@@ -1,0 +1,39 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>BSTU / Index</h1>
+        <div>
+            @Html.ActionLink("IT", "IT") <br />
+            @Html.ActionLink("LH", "LH") <br />
+            @Html.ActionLink("OH", "OH") <br />
+            @Html.ActionLink("IE", "IE") <br />
+            @Html.ActionLink("Conf", "Conf") <br />
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4"> Ауторизация выполнена  </div> <div class="col-lg-3">: @(ViewBag.IsAuth?"да":"нет")</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"> Текущий ползователь  </div> <div class="col-lg-3">: @(((string)ViewBag.UserName).Length > 0 ? (string)ViewBag.UserName : "---"  ) </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"> Текущий ползователь имет роль Администратор?  </div> <div class="col-lg-3">: @(ViewBag.IsAdmin?"да":"нет")</div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4"> Текущий ползователь имет роль Employer?  </div> <div class="col-lg-3">: @(ViewBag.IsEmployer?"да":"нет")</div>
+        </div>
+
+    </div>
+</body>
+</html>
